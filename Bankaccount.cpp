@@ -5,9 +5,9 @@
 
 
 
-//Kedamawi Mulualem
-//11/22/16
-//Project 2: Multi-class
+//Kidus Tefera
+//05/22/20
+//Project : Multi-class
 //  this double  reporter function accepts vector of BankHolder type variables (objects ) 
 //and prints the account of people with all of the money in it and the sum of all the money 
 //in each account type  and returns the sum of all the monet in the whole bank system at the end 
@@ -306,30 +306,30 @@ vector<BankHolder> bankers() {
 
   //Beginning  of reporter function
 
-double reporter(vector<BankHolder> kedamawi())
+double reporter(vector<BankHolder> Kidus())
 {
 	double sum = 0; // the vecrtor to store the sum of all acounts.
-	for (int counter = 0; counter < kedamawi().size(); counter++) {
+	for (int counter = 0; counter < Kidus().size(); counter++) {
 		double total = 0; //variable to store the sum of each account.
 		char w;//variable to store the account type of each element of an account .
 		bool buss = false; //variable to  flag if the account is a Business account.
 		bool neg = false;//variable to  flag if the account is a negative account.
 		bool pend = false;//variable to  flag if the account is a  pending account.
-		for (int s = 0; s < kedamawi()[counter].accts.size(); s++)
+		for (int s = 0; s < Kidus()[counter].accts.size(); s++)
 		{
-			if (kedamawi()[counter].accts.at(s).acctType == 'B')
+			if (Kidus()[counter].accts.at(s).acctType == 'B')
 			{
 				buss = true;
 			}
-			if (kedamawi()[counter].accts.at(s).balance < 0)
+			if (Kidus()[counter].accts.at(s).balance < 0)
 			{
 				neg = true;
 			}
 		}
 
-		if (kedamawi()[counter].accts.size() == 0)
+		if (Kidus()[counter].accts.size() == 0)
 		{
-			pend = true; cout << "-" << kedamawi()[counter].bankerName << ":" << endl
+			pend = true; cout << "-" << Kidus()[counter].bankerName << ":" << endl
 				<< "             -Accounts are pending" << endl
 				<< "----------------------------------------------------"
 				<< endl;
@@ -344,37 +344,37 @@ double reporter(vector<BankHolder> kedamawi())
 		}
 
 
-		for (int l = 0; l < kedamawi()[counter].accts.size(); l++)
+		for (int l = 0; l < Kidus()[counter].accts.size(); l++)
 		{
 
 			if (l == 0)
 			{
-				cout << kedamawi()[counter].bankerName << ":" << endl;
+				cout << Kidus()[counter].bankerName << ":" << endl;
 			}
-			w = kedamawi()[counter].accts.at(l).acctType;
+			w = Kidus()[counter].accts.at(l).acctType;
 			if (w == 'D') //chakes if the account type is  D (certificate of deposit)
 			{
 				cout << "            ";
-				if (kedamawi()[counter].accts.at(l).balance < 0) // chakes if the account is negative 
+				if (Kidus()[counter].accts.at(l).balance < 0) // chakes if the account is negative 
 				{
 					cout << "***";
 				}
-				cout << "certificate of deposit balance $" << kedamawi()[counter].accts.at(l).balance;
-				if (kedamawi()[counter].accts.at(l).balance < 0)// chakes if the account is negative 
+				cout << "certificate of deposit balance $" << Kidus()[counter].accts.at(l).balance;
+				if (Kidus()[counter].accts.at(l).balance < 0)// chakes if the account is negative 
 				{
 					cout << "***";
 				}
 				cout << endl;
-				total = total + kedamawi()[counter].accts.at(l).balance;
+				total = total + Kidus()[counter].accts.at(l).balance;
 			}
 			else if (w == 'C') //chakes if the account type is  C (Checking account)
 			{
 				cout << "            ";
-				if (kedamawi()[counter].accts.at(l).balance < 0) // chakes if the account is negative 
+				if (Kidus()[counter].accts.at(l).balance < 0) // chakes if the account is negative 
 				{
 					cout << "***";
-				} cout << "Checking account balance $" << kedamawi()[counter].accts.at(l).balance;
-				if (kedamawi()[counter].accts.at(l).balance < 0) // chakes if the account is negative 
+				} cout << "Checking account balance $" << Kidus()[counter].accts.at(l).balance;
+				if (Kidus()[counter].accts.at(l).balance < 0) // chakes if the account is negative 
 				{
 					cout << "***";
 				}; cout << endl;
@@ -383,30 +383,30 @@ double reporter(vector<BankHolder> kedamawi())
 			else if (w == 'S')//chakes if the account type is  S (Saving account balance)
 			{
 				cout << "            ";
-				if (kedamawi()[counter].accts.at(l).balance < 0) // chakes if the account is negative 
+				if (Kidus()[counter].accts.at(l).balance < 0) // chakes if the account is negative 
 				{
 					cout << "***";
-				}cout << "Saving account balance $" << kedamawi()[counter].accts.at(l).balance;
-				if (kedamawi()[counter].accts.at(l).balance < 0) // chakes if the account is negative 
+				}cout << "Saving account balance $" << Kidus()[counter].accts.at(l).balance;
+				if (Kidus()[counter].accts.at(l).balance < 0) // chakes if the account is negative 
 				{
 					cout << "***";
 				}; cout << endl;
-				total = total + kedamawi()[counter].accts.at(l).balance;
+				total = total + Kidus()[counter].accts.at(l).balance;
 			}
 			else if (w == 'B') //chakes if the account type is  B (Business account)
 			{
 				cout << "            ";
-				if (kedamawi()[counter].accts.at(l).balance < 0) // chakes if the account is negative 
+				if (Kidus()[counter].accts.at(l).balance < 0) // chakes if the account is negative 
 				{
 					cout << "***";
 				}
-				cout << "Business account balance:$" << kedamawi()[counter].accts.at(l).balance;
-				if (kedamawi()[counter].accts.at(l).balance < 0)// chakes if the account is negative 
+				cout << "Business account balance:$" << Kidus()[counter].accts.at(l).balance;
+				if (Kidus()[counter].accts.at(l).balance < 0)// chakes if the account is negative 
 				{
 					cout << "***";
 				};
 				cout << endl;
-				total = total + kedamawi()[counter].accts.at(l).balance;
+				total = total + Kidus()[counter].accts.at(l).balance;
 			}
 		}
 		if (!pend) {
@@ -414,7 +414,7 @@ double reporter(vector<BankHolder> kedamawi())
 			else if (buss) { cout << "+"; }
 			neg = false;
 			buss = false;
-			cout << "TOTAL BALANCE FOR: " << kedamawi()[counter].bankerName << ": $" << total << endl << "-----------------------------------------------------" << endl;//prints out the total for the non pendling accounts 
+			cout << "TOTAL BALANCE FOR: " << Kidus()[counter].bankerName << ": $" << total << endl << "-----------------------------------------------------" << endl;//prints out the total for the non pendling accounts 
 		}
 		sum = sum + total;//keeps adding all the accounts .
 	}return sum;
